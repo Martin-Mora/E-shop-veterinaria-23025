@@ -2,33 +2,57 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
 }
 
 :root{
-  --color-principal:#393646;
+  --color-principal:hsl(244, 38%, 16%);
   --color-secundario:#FFF;
   --color-terciario:#6D5D6E;
+
+
+  --Very-dark-blue:hsl(233, 47%, 7%);
+  --Soft-violet:rgb(170, 92, 219);
 }
 
 /* generales */
 
-
 html{
+  height: 100%;
+
+}
+
+body{
+  display: flex;
+  flex-direction: column;
   min-height: 100%;
-  position: relative;
+}
+
+/* modal */
+.modal-background{
+  background-color: hsla(0deg, 0%, 0%, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 1;
+  display: none;
 }
 
 /*  primer header */
+
 .promo-local{
-  background-color: #F4EEE0;
   height: 5vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  color: var(--Soft-violet);
 }
 
 .promo-local__titulo{
-  font-size: 1em;
+  font-size: 0.8em;
+  
 }
 
 .promo-local__sucursales{
@@ -39,9 +63,9 @@ html{
 }
 
 .promo-local__sucursales--titulo a{
-  font-size: 1em;
+  font-size: 0.7em;
   text-decoration: none;
-  color: var(--color-terciario);
+  color: var(--Soft-violet);
 }
 
 
@@ -54,7 +78,14 @@ html{
 @media (min-width:1024px) {
   .promo-local__titulo,.promo-local__sucursales{
     font-size: 1.2em;
+    
   }
+
+  .promo-local__sucursales{
+    width: 20%;
+  }
+
+  
 }
 
 /* header */
@@ -70,6 +101,7 @@ header{
   left: 0;
   top: 0;
   right: 0;
+  z-index: 2;
 }
 
 .logo{
@@ -84,6 +116,8 @@ header{
 
 
 /* navegacion */
+
+
 .listaItems{
   display: flex;
 }
@@ -94,11 +128,15 @@ header{
   
 }
 
-.listaItems  a{
+.listaItems a{
   text-decoration: none;
   margin: 0 2em;
   color: white;
   font-size: 1.3em;
+}
+
+.listaItems a:hover{
+  color: var(--Soft-violet);
 }
 
 @media (max-width:1024px) {
@@ -114,36 +152,28 @@ header{
 
   .listaItems{
     flex-direction: column;
-    gap: 1em;
+    gap: 2.5em;
     background-color: var(--color-principal);
     position: absolute;
     top: 0;
     right: 0;
-    height: 90vh;
+    height: 100vh;
     width: 25vh;
+    align-items: center;
     
   }
+
+  .item a{
+    padding-right: 1em;
+  }
+
   .x{
-    text-align: end;
-    padding-right:1em ;
-    margin-bottom: 1em;
+    position: relative;
+    left: 2em;
+    top: .5em;
     font-size: 1.3em;
     color:white;
   }
-
-  .lista-productos{
-    display: none;
-    flex-direction:column;
-    position: absolute;
-    background-color: #867070;
-    top:4em;
-    height: 10vh;
-    
-  }
-
-  /* .listaItems .item:hover>.lista-productos{
-    display: block;
-  } */
 }
 
 @media (min-width:1024px) {
@@ -177,11 +207,6 @@ header{
     transition: all 0.5s;
   }
 
-
-  .listaItems .item a:hover{
-    border-bottom: 2px solid #F4EEE0;
-  }
-
   .listaItems a{
     margin: 0 3em;
   }
@@ -198,18 +223,194 @@ header{
     background-color: var(--color-principal);
     top:4em;
     height: 10vh;
-    
   }
 
   .lista-productos li{
     margin: 0.5em 0;
   }
 
-  .listaItems .item:hover>.lista-productos{
-    display: block;
-  }
+}
+
+/* productos */
+
+.productos__titulo{
+  text-align: center;
+  margin:2em 0;
+}
+
+.productos{
+  margin:2em 0;
+}
+
+.productos__grid{
+  display: grid;
+  grid-template-columns: repeat(2,auto);
+  place-items: center;
+  gap: 1em;
 
 }
+
+
+/* card */
+
+
+.card{
+  width: 10em;
+  height: 25.5em;
+  border: 1px solid #33333343;
+  text-align: center;
+  padding: 1em;
+  transition: all 0.5s;
+}
+
+.card:hover{
+
+  border: 1px solid var(--color-principal);
+
+  -webkit-box-shadow: 9px 10px 5px -3px rgba(0,0,0,0.75);
+-moz-box-shadow: 9px 10px 5px -3px rgba(0,0,0,0.75);
+box-shadow: 9px 10px 5px -3px rgba(0,0,0,0.75);
+}
+
+.card__img{
+  width: 72%;
+  height: 10em;
+  margin: auto;
+}
+
+.card__img img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+.description h5{
+  font-size: 0.8em;
+}
+
+.description__card,.description__price{
+  font-size: 0.6em;
+}
+
+.description__kg{
+  font-weight: 700;
+}
+
+.description{
+  height: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  
+}
+
+.description__btn{
+  background-color: var(--color-principal);
+  color: var(--color-secundario);
+  padding: 0.5em;
+  border-radius: 10px;
+  text-decoration: none;
+  font-size: 1em;
+  transition: all .2s;
+  
+}
+
+.description__btn:hover{
+  color: var(--Soft-violet);
+}
+
+.description__price{
+  font-size: 0.8em;
+  color: var(--Soft-violet);
+}
+
+.precio{
+  font-weight: 700;
+}
+
+@media (min-width:768px){
+  .productos__grid{
+    grid-template-columns: repeat(3,auto);
+    justify-content: space-evenly;
+    padding: 0 2em;
+  }
+}
+
+@media (min-width:1024px) {
+  
+  .card{
+    width: 20em;
+    height: 35em;
+  }
+
+  .card__img{
+    width: 70%;
+    height: 50%;
+  }
+
+  .description{
+    height: 50%;
+  }
+
+  .description h5{
+    font-size: 1.2em;
+    margin: 1em 0;
+  }
+  
+  .description__card,.description__kg,.description__price{
+    font-size: 0.8em;
+    margin-top: 0.8em;
+  }
+
+  .description__kg{
+    font-size: 1em;
+  }
+
+  .description__price{
+    font-size: 1.2em;
+  }
+
+  .description__btn{
+    width: 60%;
+    margin: auto;
+  }
+}
+
+/* seleccionar */
+.seleccionar{
+  text-align: center;
+  margin: 2em auto;
+}
+
+.seleccionar__productos{
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  padding: 5px;
+  background-color: white;
+  font-size: 0.8em;
+  color: #555;
+  width: 20em;
+}
+
+.seleccionar__productos:focus{
+  outline: none;
+  border-color: var(--color-principal);
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.seleccionar__productos option:hover {
+  background-color: var(--color-principal);
+  color: #fff;
+}
+
+@media (min-width:1024px) {
+  .seleccionar__productos{
+    font-size: 0.9em;
+  }
+}
+
 
 
 
@@ -217,10 +418,7 @@ header{
 
 footer{
   background-color: var(--color-principal);
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  left: 0;
+  margin-top: auto;
   text-align: center;
 }
 
@@ -230,7 +428,7 @@ footer{
 
 
 .medios-pagos__title,.redes__titulo{
-  color: var(--color-secundario);
+  color: var(--Soft-violet);
   font-size: 1em;
   letter-spacing: 0.2em;
 } 
