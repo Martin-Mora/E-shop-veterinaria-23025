@@ -229,6 +229,42 @@ header{
     margin: 0.5em 0;
   }
 
+} */
+
+/* inicio(index) */
+#inicio-banner-section{
+  width: 100%;
+  height: 85vh;
+  overflow: hidden;
+}
+#inicio-banner-section ul{
+  display: flex;
+  width: 500%;
+  animation: automatico 15s infinite ease-in-out;
+}
+#inicio-banner-section li{
+  width: 100%;
+  list-style: none;
+}
+.inicio-img-banner img{
+  width: 100%;
+  height: 100%;
+}
+@keyframes automatico{
+  0%{margin-left: 0;}
+  15%{margin-left: 0;}
+
+  20%{margin-left: -100%;}
+  35%{margin-left: -100%;}
+
+  40%{margin-left: -200%;}
+  55%{margin-left: -200%;}
+
+  60%{margin-left: -300%;}
+  75%{margin-left: -300%;}
+  
+  80%{margin-left: -400%;}
+  95%{margin-left: -400%;}
 }
 
 /* productos */
