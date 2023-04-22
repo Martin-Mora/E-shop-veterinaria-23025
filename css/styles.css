@@ -295,7 +295,7 @@ header{
   border:none;
   background: rgba(0,0,0,0.3);
   width: 2em;
-  height: 50%;
+  height: 20%;
   top:cal(50% - 25%);
   color:#fff;
   font-size: 1em;
@@ -311,6 +311,20 @@ header{
 }
 .inicio-flex-ofertas .inicio-flecha-izquierda:hover, .inicio-flex-ofertas .inicio-flecha-derecha:hover{
   background:rgba(0,0,0,0.9);
+}
+
+.inicio-contenedor-carrusel-ofertas{ /* haciendo carrusel */
+  width: 100%;
+  overflow: hidden;
+}
+.inicio-carrusel-ofertas{
+  display: flex;
+  gap:2em;
+  
+  
+}
+.inicio-carrusel-ofertas .card{
+  width: 50%;
 }
 
 
