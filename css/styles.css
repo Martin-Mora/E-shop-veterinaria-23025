@@ -236,7 +236,7 @@ header{
      /* banner */
   .slider{
     width: 100%;
-    height: 75vh;
+    height: 50vh;
     overflow: hidden;
   }
   .slider ul{
@@ -254,7 +254,7 @@ header{
   }
   .slider img{
       width: 100%;
-      height: 75vh;
+      height: 50vh;
   }
   @keyframes automatico{
       0%{margin-left: 0;}
@@ -275,6 +275,43 @@ header{
 
     /* carrousel ofertas */
 
+.inicio-ofertas-titulo{
+  text-align: center;
+  margin:2em 0;
+}
+
+.inicio-ofertas{
+  margin: 2em 0;
+}
+
+.inicio-flex-ofertas{ /* centrar las flechas */
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.inicio-flex-ofertas .inicio-flecha-izquierda, .inicio-flex-ofertas .inicio-flecha-derecha{ /* estilos a las flechas*/
+  position:absolute;
+  border:none;
+  background: rgba(0,0,0,0.3);
+  width: 2em;
+  height: 50%;
+  top:cal(50% - 25%);
+  color:#fff;
+  font-size: 1em;
+  cursor: pointer;
+  z-index:20;
+  transition: 0.2s ease all;
+}
+.inicio-flex-ofertas .inicio-flecha-izquierda{
+  left:0;
+}
+.inicio-flex-ofertas .inicio-flecha-derecha{
+  right:0;
+}
+.inicio-flex-ofertas .inicio-flecha-izquierda:hover, .inicio-flex-ofertas .inicio-flecha-derecha:hover{
+  background:rgba(0,0,0,0.9);
+}
 
 
 /* productos */
