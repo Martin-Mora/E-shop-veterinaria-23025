@@ -316,7 +316,7 @@ header{
 
 .inicio-contenedor-carrusel-ofertas{ 
   width: 100%;
-  overflow: hidden;
+  overflow:hidden;
 }
 .inicio-carrusel-ofertas{
   display: flex;
@@ -326,11 +326,11 @@ header{
 }
 .inicio-carrusel-ofertas .card{
   min-width: 50%;
-  height: 80%;
+  height: 30%;
 }
 .inicio-carrusel-ofertas .card .card__image img{
   width: 40%;
-  /* height: 30%; */
+  height: 30%;  /* VER PORQUÉ NO QUEDA BIEN DONDE DICE COMPRAR */
 }
 
 @media (min-width:768px){
