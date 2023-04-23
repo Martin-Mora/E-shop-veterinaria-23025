@@ -274,24 +274,24 @@ header{
       95%{margin-left: -400%;}
   }
 
-    /* carrousel ofertas */
+    /* carrousel ofertas y productos destacados */
 
-.inicio-ofertas-titulo{
+.inicio-ofertas-titulo, .inicio-productos-destacados-titulo{
   text-align: center;
   margin:2em 0;
 }
 
-.inicio-ofertas{
+.inicio-ofertas, .inicio-productos-destacados{
   margin: 2em 0;
 }
 
-.inicio-flex-ofertas{ /* centrar las flechas */
+.inicio-flex-ofertas, .inicio-flex-productos-destacados{ /* centrar las flechas */
   display: flex;
   align-items: center;
   position: relative;
 }
 
-.inicio-flex-ofertas .inicio-flecha-izquierda, .inicio-flex-ofertas .inicio-flecha-derecha{ /* estilos a las flechas*/
+.inicio-flecha-izquierda, .inicio-flecha-derecha{ /* estilos a las flechas*/
   position:absolute;
   border:none;
   background: rgba(0,0,0,0.3);
@@ -304,37 +304,37 @@ header{
   z-index:20;
   transition: 0.2s ease all;
 }
-.inicio-flex-ofertas .inicio-flecha-izquierda{
+.inicio-flecha-izquierda{
   left:0;
 }
-.inicio-flex-ofertas .inicio-flecha-derecha{
+.inicio-flecha-derecha{
   right:0;
 }
-.inicio-flex-ofertas .inicio-flecha-izquierda:hover, .inicio-flex-ofertas .inicio-flecha-derecha:hover{
+.inicio-flecha-izquierda:hover, .inicio-flecha-derecha:hover{
   background:rgba(0,0,0,0.9);
 }
 
-.inicio-contenedor-carrusel-ofertas{ 
+.inicio-contenedor-carrusel-ofertas, .inicio-contenedor-carrusel-productos-destacados{ 
   width: 100%;
   overflow:hidden;
 }
-.inicio-carrusel-ofertas{
+.inicio-carrusel-ofertas, .inicio-carrusel-productos-destacados{
   display: flex;
   gap:1.5em;
   margin-left: 1em;
   margin-right: 3em;
 }
-.inicio-carrusel-ofertas .card{
+.inicio-carrusel-ofertas .card, .inicio-carrusel-productos-destacados .card{
   min-width: 50%;
   height: 30%;
 }
-.inicio-carrusel-ofertas .card .card__image img{
+.inicio-carrusel-ofertas .card .card__image img, .inicio-carrusel-productos-destacados .card .card__image img{
   width: 40%;
   height: 30%;  /* VER PORQUÉ NO QUEDA BIEN DONDE DICE COMPRAR */
 }
 
 @media (min-width:768px){
-  .inicio-carrusel-ofertas .card{
+  .inicio-carrusel-ofertas .card, .inicio-carrusel-productos-destacados .card{
     min-width: 33%;
   }
 }
