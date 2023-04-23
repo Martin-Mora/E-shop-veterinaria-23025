@@ -12,7 +12,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="./css/styles.css">
-  <title>Document</title>
+  <title>buddy's shop | Productos para tus mascota</title>
 </head>
 <body>
 
@@ -31,9 +31,9 @@
     <nav class="navOcult">
       <ul class="listaItems">
         <li class="item x">x</li>
-        <li class="item"><a href="#">Inicio</a></li>
-        <li class="item"><a href="./productos.html">Productos</a></li>
-        <li class="item"><a href="#">Servicios</a></li>
+        <li class="item"><a href="./index.html">Inicio</a></li>
+        <li class="item"><a href="#">Productos</a></li>
+        <li class="item"><a href="#">Informacion</a></li>
         <li class="item"><a href="#">Contacto</a></li>
       </ul>
     </nav>
@@ -42,6 +42,27 @@
 
   <main>
 
+     <!-- modal -->
+     <div class="modal-background">
+  
+     </div>
+
+    <Section class="productos">
+      <h2 class="productos__titulo">Productos</h2>
+
+      <div class="seleccionar">
+        <select name="productos" class="seleccionar__productos">
+          <option value="producto">Mostrar todos los productos</option>
+          <option value="comida gato">Mostrar comida de gatos</option>
+          <option value="comida perro">Mostrar comida de perros</option>
+          <option value="juguetes">Mostrar juguetes</option>
+        </select>
+      </div>
+
+      <div class="productos__grid">
+
+      </div>
+    </Section>
 
 
   </main>
@@ -81,5 +102,6 @@
 
   <script src="./data.js"></script>
   <script src="./main.js"></script>
-</body>
+  <script src="./productos.js"></script>    
+  </body>
 </html>
