@@ -236,7 +236,7 @@ header{
      /* banner */
   .slider{
     width: 100%;
-    height: 75vh;
+    height: 50vh;
     overflow: hidden;
     margin-top: 2em;
   }
@@ -255,7 +255,7 @@ header{
   }
   .slider img{
       width: 100%;
-      height: 75vh;
+      height: 65vh;
   }
   @keyframes automatico{
       0%{margin-left: 0;}
@@ -294,9 +294,10 @@ header{
 .inicio-flecha-izquierda, .inicio-flecha-derecha{ /* estilos a las flechas*/
   position:absolute;
   border:none;
+  border-radius: 30%;
   background: rgba(0,0,0,0.3);
   width: 2em;
-  height: 20%;
+  height: 10%;
   top:cal(50% - 25%);
   color:#fff;
   font-size: 1em;
@@ -325,12 +326,12 @@ header{
   margin-right: 3em;
 }
 .inicio-carrusel-ofertas .card, .inicio-carrusel-productos-destacados .card{
-  min-width: 50%;
-  height: 30%;
+  width: 50%;
+  height: 50%;
 }
 .inicio-carrusel-ofertas .card .card__image img, .inicio-carrusel-productos-destacados .card .card__image img{
   width: 40%;
-  height: 30%;  /* VER PORQUÉ NO QUEDA BIEN DONDE DICE COMPRAR */
+  height: 100%;  /* VER PORQUÉ NO QUEDA BIEN DONDE DICE COMPRAR */
 }
 
 @media (min-width:768px){
