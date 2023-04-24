@@ -255,7 +255,7 @@ header{
 }
 .slider img{
   width: 100%;
-  height: 65vh;
+  height: 40%;
 }
 @keyframes automatico{
   0%{margin-left: 0;}
@@ -316,7 +316,7 @@ header{
 }
 
 .inicio-contenedor-carrusel-ofertas, .inicio-contenedor-carrusel-productos-destacados, .inicio-contenedor-carrusel-marcas{ 
-  width: 100%;
+  width: 95%;
   height: auto;
   margin: auto;
   overflow:hidden;
@@ -341,22 +341,21 @@ header{
 /* banner de marcas */
 .inicio-marcas-imagen{
   display: flex;
-  animation: mover 35s linear infinite;
-  min-width: 20%;
-  height: 50%;
+  max-width:50%;
+  animation: mover 30s linear infinite;
   
 }
 .inicio-marcas-imagen img{
-  gap:0.1em;
   width:100%;
   height: 9em;
+  padding:1em;
 }
 @keyframes mover{
   0%{
     transform:translateX(0);
   }
   100%{
-    transform: translateX(calc(-450%));
+    transform: translateX(calc(-800%));
   }
 } 
 
@@ -366,9 +365,13 @@ header{
 .inicio-carrusel-ofertas .card, .inicio-carrusel-productos-destacados .card{
   min-width: 33%;
   }
-.inicio-marcas-imagen img{
-  padding: 1em;
-  height: 9.375em;
+@keyframes mover{
+  0%{
+    transform:translateX(0);
+  }
+  100%{
+    transform: translateX(calc(-650%));
+  }
 }
 }
 
