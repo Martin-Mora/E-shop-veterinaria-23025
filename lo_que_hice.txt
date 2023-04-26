@@ -1,0 +1,7 @@
+Transiciones, animaciones:
+1) En el banner de imágenes.
+2) En los productos, tanto en página index como productos, que usan las mismas clases.
+3) Flechas.
+4) Banner de marca.
+
+Por lo menos en el index puse el flavicon, meta description.

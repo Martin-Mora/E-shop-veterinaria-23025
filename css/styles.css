@@ -115,17 +115,6 @@ header{
 }
 
 
-/* BUDDY'S SHOP*/
-.tienda{
-  font-size:0.9em;
-  margin-left: 3em;
-  margin-right: 1em;
-  text-align: center;
-}
-.tienda:hover{
-  color: var(--Soft-violet);
-}
-
 /* navegacion */
 
 
