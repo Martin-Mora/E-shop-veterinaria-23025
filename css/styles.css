@@ -115,6 +115,17 @@ header{
 }
 
 
+/* BUDDY'S SHOP*/
+.tienda{
+  font-size:1em;
+  margin-left: 3em;
+  margin-right: 1em;
+  text-align: center;
+}
+.tienda:hover{
+  color: var(--Soft-violet);
+}
+
 /* navegacion */
 
 
@@ -124,8 +135,6 @@ header{
 
 .listaItems .item{
   list-style: none;
-  
-  
 }
 
 .listaItems a{
@@ -269,7 +278,7 @@ header{
 
   60%{margin-left: -300%;}
   75%{margin-left: -300%;}
-
+  
   80%{margin-left: -400%;}
   95%{margin-left: -400%;}
 }
@@ -318,7 +327,7 @@ header{
 
 .inicio-contenedor-carrusel-ofertas, .inicio-contenedor-carrusel-productos-destacados, .inicio-contenedor-carrusel-marcas{ 
   width: 100%;
-  min-height: 100%;
+  height: 100%;
   margin: auto;
   overflow:hidden;
 }
@@ -333,7 +342,7 @@ header{
 .inicio-carrusel-ofertas .card, .inicio-carrusel-productos-destacados .card{
   min-width: 50%;
   display: flex;
-  min-height: 100%;
+  height: auto;
   flex-wrap: wrap;
 }
 .inicio-carrusel-ofertas .card .card__image img, .inicio-carrusel-productos-destacados .card .card__image img{

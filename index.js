@@ -13,7 +13,7 @@ FLECHA_DERECHA.addEventListener('click', () => {
 // Mover las imágenes con la flecha izquierda //
 FLECHA_IZQUIERDA.addEventListener('click', () =>{
   FILA.scrollLeft= FILA.scrollLeft - FILA.offsetWidth;
-})
+});
 
 // Mover las imágenes con la flecha derecha Productos destacados//
 FLECHA_DERECHA_DESTACADOS.addEventListener('click', () => {
@@ -22,4 +22,4 @@ FLECHA_DERECHA_DESTACADOS.addEventListener('click', () => {
 // Mover las imágenes con la flecha izquierda //
 FLECHA_IZQUIERDA_DESTACADOS.addEventListener('click', () =>{
   FILA_DESTACADOS.scrollLeft= FILA_DESTACADOS.scrollLeft - FILA_DESTACADOS.offsetWidth;
-})
+});
