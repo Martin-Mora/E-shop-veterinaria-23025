@@ -117,7 +117,7 @@ header{
 
 /* BUDDY'S SHOP*/
 .tienda{
-  font-size:1em;
+  font-size:0.9em;
   margin-left: 3em;
   margin-right: 1em;
   text-align: center;
@@ -286,7 +286,7 @@ header{
   /* carrousel ofertas y productos destacados */
 
 .inicio-ofertas-titulo, .inicio-productos-destacados-titulo, .inicio-marcas-titulo{
-  font-size: 2.5em;
+  font-size: 1.5em;
   text-align: center;
   margin:2em 0;
 }
@@ -295,10 +295,11 @@ header{
   margin: 2em 0;
 }
 
-.inicio-flex-ofertas, .inicio-flex-productos-destacados, .inicio-flex-marcas{ /* centrar las flechas */
+.inicio-flex-ofertas, .inicio-flex-productos-destacados{ /* centrar las flechas */
   display: flex;
   align-items: center;
   position: relative;
+  height: 80vh;
 }
 
 .inicio-flecha-izquierda, .inicio-flecha-derecha{ /* estilos a las flechas*/
@@ -342,12 +343,73 @@ header{
 .inicio-carrusel-ofertas .card, .inicio-carrusel-productos-destacados .card{
   min-width: 50%;
   display: flex;
+  align-items:end;
   height: auto;
   flex-wrap: wrap;
 }
+
+.inicio-carrusel-ofertas .card .description, .inicio-carrusel-productos-destacados .card .description{
+  height: 50%;
+}
 .inicio-carrusel-ofertas .card .card__image img, .inicio-carrusel-productos-destacados .card .card__image img{
-  width: 60%;
-  height: 100%;
+  width: 75%;
+  height: 85%;
+}
+@media (max-width:330px){
+  .inicio-flex-ofertas, .inicio-flex-productos-destacados{
+    height: 75vh;
+  }
+  .inicio-ofertas-titulo, .inicio-productos-destacados-titulo, .inicio-marcas-titulo{
+    font-size: 1.5em;
+  }
+  .tienda{
+    font-size: 84%;
+  }
+  .inicio-carrusel-ofertas .card .description, .inicio-carrusel-productos-destacados .card .description{
+    height:60%;
+  }
+}
+@media (min-width:426px){
+  .inicio-flex-ofertas, .inicio-flex-productos-destacados{
+    height: 80vh;
+  }
+  .inicio-ofertas-titulo, .inicio-productos-destacados-titulo, .inicio-marcas-titulo{
+    font-size: 1.5em;
+  }
+  .inicio-carrusel-ofertas .card .description, .inicio-carrusel-productos-destacados .card .description{
+    height:35%;
+  }
+  .inicio-carrusel-ofertas .card .card__image img, .inicio-carrusel-productos-destacados .card .card__image img{
+    width: 45%;
+    height: 75%;
+  }
+}
+
+@media (min-width:768px){
+  .inicio-flex-ofertas, .inicio-flex-productos-destacados{
+    height: 90vh;
+  }
+  .inicio-ofertas-titulo, .inicio-productos-destacados-titulo, .inicio-marcas-titulo{
+    font-size: 2.5em;
+  }
+  .inicio-carrusel-ofertas .card .description, .inicio-carrusel-productos-destacados .card .description{
+    height:50%;
+  }
+}
+@media (min-width:1024px){
+  .inicio-flex-ofertas, .inicio-flex-productos-destacados{
+    height: 100vh;
+  }
+  .inicio-ofertas-titulo, .inicio-productos-destacados-titulo, .inicio-marcas-titulo{
+    font-size: 2.5em;
+  }
+  .inicio-carrusel-ofertas .card .description, .inicio-carrusel-productos-destacados .card .description{
+    height:45%;
+  }
+  .inicio-carrusel-ofertas .card .card__image img, .inicio-carrusel-productos-destacados .card .card__image img{
+    width: 40%;
+    height: 70%;
+  }
 }
 
 /* banner de marcas */
