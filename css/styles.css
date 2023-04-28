@@ -2,33 +2,57 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
 }
 
 :root{
-  --color-principal:#393646;
+  --color-principal:hsl(244, 38%, 16%);
   --color-secundario:#FFF;
   --color-terciario:#6D5D6E;
+
+
+  --Very-dark-blue:hsl(233, 47%, 7%);
+  --Soft-violet:rgb(170, 92, 219);
 }
 
 /* generales */
 
-
 html{
+  height: 100%;
+
+}
+
+body{
+  display: flex;
+  flex-direction: column;
   min-height: 100%;
-  position: relative;
+}
+
+/* modal */
+.modal-background{
+  background-color: hsla(0deg, 0%, 0%, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 1;
+  display: none;
 }
 
 /*  primer header */
+
 .promo-local{
-  background-color: #F4EEE0;
   height: 5vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  color: var(--Soft-violet);
 }
 
 .promo-local__titulo{
-  font-size: 1em;
+  font-size: 0.8em;
+  
 }
 
 .promo-local__sucursales{
@@ -39,9 +63,9 @@ html{
 }
 
 .promo-local__sucursales--titulo a{
-  font-size: 1em;
+  font-size: 0.7em;
   text-decoration: none;
-  color: var(--color-terciario);
+  color: var(--Soft-violet);
 }
 
 
@@ -54,7 +78,14 @@ html{
 @media (min-width:1024px) {
   .promo-local__titulo,.promo-local__sucursales{
     font-size: 1.2em;
+    
   }
+
+  .promo-local__sucursales{
+    width: 20%;
+  }
+
+  
 }
 
 /* header */
@@ -70,6 +101,7 @@ header{
   left: 0;
   top: 0;
   right: 0;
+  z-index: 2;
 }
 
 .logo{
@@ -84,6 +116,8 @@ header{
 
 
 /* navegacion */
+
+
 .listaItems{
   display: flex;
 }
@@ -94,11 +128,15 @@ header{
   
 }
 
-.listaItems  a{
+.listaItems a{
   text-decoration: none;
   margin: 0 2em;
   color: white;
   font-size: 1.3em;
+}
+
+.listaItems a:hover{
+  color: var(--Soft-violet);
 }
 
 @media (max-width:1024px) {
@@ -114,36 +152,28 @@ header{
 
   .listaItems{
     flex-direction: column;
-    gap: 1em;
+    gap: 2.5em;
     background-color: var(--color-principal);
     position: absolute;
     top: 0;
     right: 0;
-    height: 90vh;
+    height: 100vh;
     width: 25vh;
+    align-items: center;
     
   }
+
+  .item a{
+    padding-right: 1em;
+  }
+
   .x{
-    text-align: end;
-    padding-right:1em ;
-    margin-bottom: 1em;
+    position: relative;
+    left: 2em;
+    top: .5em;
     font-size: 1.3em;
     color:white;
   }
-
-  .lista-productos{
-    display: none;
-    flex-direction:column;
-    position: absolute;
-    background-color: #867070;
-    top:4em;
-    height: 10vh;
-    
-  }
-
-  /* .listaItems .item:hover>.lista-productos{
-    display: block;
-  } */
 }
 
 @media (min-width:1024px) {
@@ -177,11 +207,6 @@ header{
     transition: all 0.5s;
   }
 
-
-  .listaItems .item a:hover{
-    border-bottom: 2px solid #F4EEE0;
-  }
-
   .listaItems a{
     margin: 0 3em;
   }
@@ -198,29 +223,237 @@ header{
     background-color: var(--color-principal);
     top:4em;
     height: 10vh;
-    
   }
 
   .lista-productos li{
     margin: 0.5em 0;
   }
 
-  .listaItems .item:hover>.lista-productos{
-    display: block;
+}
+
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+/*Servicios*/
+.servicios{
+  background-color: white;
+  padding: 10px;
   }
 
+
+  .titulo_tratamiento, .servicios__titulo, .text3{
+  font-style: oblique;
+  text-decoration: underline;
+  margin-top: 50px;
+  text-align: center;
+  margin:2em 0;
+  font-size: 1.5em;
+  }
+  
+  /*para las listas*/
+.list-esp, .list-extra {
+  display: flex;
+  flex-direction: column;
+    gap: 0.5em;
+    margin-left: 30px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    
+  }
+
+  .list-extra li{
+  margin-bottom: 0.8em;
+  }
+
+/*Tabla*/
+table{
+  background-color: var(--Soft-violet);
+  text-align: center;
+
+}
+.table1 {
+ margin-bottom: 1em;
+}
+
+th {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  font-size: 13px; 
+  font-weight: normal;
+  padding: 8px;
+  background:var(--Very-dark-blue);
+  border-bottom: 1px solid var(--Soft-violet); 
+  color: var(--Soft-violet); }
+
+td {
+  padding: 8px;
+  background: var(--Very-dark-blue);
+  color: white;
+  border-top: 1px solid transparent;
+  
+}
+
+tr:hover td { background:var(--Soft-violet); color: var(--Very-dark-blue); }  
+
+
+/*p del final*/
+.text1 {
+  font-weight: 700;
+  font-style: oblique;
+  text-align: start;  
+}
+.text1{
+  margin-bottom: 30px;
+  }
+
+
+  /*-----------------------------------------------------------------------------------------------------------------------------*/
+
+  /* caja padre */
+  .cardTamañoPerro,.Tratamiento{
+    width: 300px;
+    padding: 10px;
+    border-radius:10px ;
+    margin:2em auto;
+  }
+
+  /* caja para cada uno de los hijos */
+  .cardTamañoPerro__card, .cardTratamiento__card{
+    background-color: var(--Very-dark-blue);
+    display: flex;
+    flex-direction: column;
+    margin: 2em auto;
+    border-radius: 10px;
+    align-items: center;
+    height: 450px;
+    }
+  
+    
+  /* caja de la imagen */
+  .cardTamañoPerro_img,.cardTratamiento_img{
+    width: 200px;
+    height: 300px;
+    margin:2em auto;
+    padding: auto;
+  }
+  
+  /* imagen */
+  .cardTamañoPerro img, .cardTratamiento__card img{
+    width: 100%;
+    height: 100%;
+  }
+
+  /* descripcion */
+  .cardTamañoPerro_description,.cardTratamiento_description{
+    color: var(--color-secundario);
+    background-color: var(--Soft-violet);
+    padding: 10px;
+    border-radius: 10px;
+
+  }
+  
+  /* MEDIA */
+  /* hasta esta resolucion: resolucion */
+@media (max-width:768px) {
+  body{
+    background-color: white;
+  }
+
+  /* oculta la tabla 3 hasta los 768px */
+  .table3{
+    display: none;
+  }
+}
+
+/* tablet  */
+/* desde esta resolucion: resolucion */
+@media (min-width:768px) {
+  body{
+    background-color: white;
+  }
+
+  .table1,.table2{
+    display: none;
+  }
+
+  /* aparece la tabla 3 a partir de los 768px con esta propiedad inline o block */
+  .table3{
+    display: inline-block;
+  }
+  
+  .contenedor_tabla{
+    display: flex;
+    justify-content: center;
+    }
+
+  .cardTamañoPerro,.Tratamiento{
+    width: 728px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    }
+
+  .cardTamañoPerro__card,.cardTratamiento__card{
+  width: 300px;
+  }
 }
 
 
+/* notebook o pantallas de escritorio chicas */
+@media (min-width:1024px) {
+  .cardTamañoPerro,.Tratamiento{
+    width: 1024px;
+    }
+
+    .contenedor_tabla{
+      width: 100vh;
+      margin: auto;
+    }
+
+  .cardTamañoPerro__card,.cardTratamiento__card{
+    width: 350px;
+    }
+    
+    .cardTamañoPerro_img,.cardTratamiento_img{
+    width: 200px;
+    height: 300px;
+  }
+
+  .list-esp, .list-extra{
+    width: 50%;
+    margin: 2em auto;
+    }
+  
+    .text0, .text1, .text2{
+      text-align: center;
+    }
+
+}
+
+/* Pantalla Escritorio */
+@media (min-width:1440px) {
+  .cardTamañoPerro,.Tratamiento{
+    width: 1440px;
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  .cardTamañoPerro__card,.cardTratamiento__card{
+    width: 300px;
+    height: 400px;
+    }
+    
+    .cardTamañoPerro_img,.cardTratamiento_img{
+    width: 180px;
+    height: 250px;
+  }
+  
+  }
+/*-------------------------------------------------------------------------------------------------------------------------------*/
 
 /* footer */
 
 footer{
   background-color: var(--color-principal);
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  left: 0;
+  margin-top: auto;
   text-align: center;
 }
 
@@ -230,7 +463,7 @@ footer{
 
 
 .medios-pagos__title,.redes__titulo{
-  color: var(--color-secundario);
+  color: var(--Soft-violet);
   font-size: 1em;
   letter-spacing: 0.2em;
 } 
