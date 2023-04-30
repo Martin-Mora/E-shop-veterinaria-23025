@@ -51,7 +51,7 @@ function renderCards(){
       <p class="description__card">${element.description}</p>
       ${element.kg ? `<p class="description__kg">${element.kg}</p>` : ''}
       <p class="description__price"> <span class="precio">Precio:</span> $${element.price}</p>
-      <a href="#" class="description__btn">COMPRAR</a>
+      <a href="./detalles.html?id=${element._id}" class="description__btn">Detalles</a>
     </div>
   </div>
   `
@@ -80,7 +80,7 @@ function mostrarComidaGato(){
         <p class="description__card">${element.description}</p>
         ${element.kg ? `<p class="description__kg">${element.kg}</p>` : ''}
         <p class="description__price"> <span class="precio">Precio:</span> $${element.price}</p>
-        <a href="#" class="description__btn">COMPRAR</a>
+        <a href="./detalles.html?id=${element._id}" class="description__btn">Detalles</a>
       </div>
     </div>
     `
@@ -110,7 +110,7 @@ function mostrarComidaPerro(){
         <p class="description__card">${element.description}</p>
         ${element.kg ? `<p class="description__kg">${element.kg}</p>` : ''}
         <p class="description__price"> <span class="precio">Precio:</span> $${element.price}</p>
-        <a href="#" class="description__btn">COMPRAR</a>
+        <a href="./detalles.html?id=${element._id}" class="description__btn">Detalles</a>
       </div>
     </div>
     `
@@ -140,7 +140,7 @@ function mostrarJuguetes(){
         <p class="description__card">${element.description}</p>
         ${element.kg ? `<p class="description__kg">${element.kg}</p>` : ''}
         <p class="description__price"> <span class="precio">Precio:</span> $${element.price}</p>
-        <a href="#" class="description__btn">COMPRAR</a>
+        <a href="./detalles.html?id=${element._id}" class="description__btn">Detalles</a>
       </div>
     </div>
     `
