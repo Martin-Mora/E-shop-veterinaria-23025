@@ -125,8 +125,6 @@ header{
 
 .listaItems .item{
   list-style: none;
-  
-  
 }
 
 .listaItems a{
@@ -231,6 +229,237 @@ header{
   }
 
 }
+
+/* INICIO */
+
+  /* banner */
+.slider{
+  width: 100%;
+  height: 60vh;
+  overflow: hidden;
+  margin-top: 2em;
+}
+.slider ul{
+  display: flex;
+  width: 500%;
+  animation-name: automatico;
+  animation-duration: 20s;
+  animation-delay: 0.5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+.slider li{
+  width: 100%;
+  list-style: none;
+}
+.slider img{
+  width: 100%;
+  height: 70vh;
+}
+@keyframes automatico{
+  0%{margin-left: 0;}
+  15%{margin-left: 0;}
+
+  20%{margin-left: -100%;}
+  35%{margin-left: -100%;}
+
+  40%{margin-left: -200%;}
+  55%{margin-left: -200%;}
+
+  60%{margin-left: -300%;}
+  75%{margin-left: -300%;}
+  
+  80%{margin-left: -400%;}
+  95%{margin-left: -400%;}
+}
+
+  /* carrousel ofertas y productos destacados */
+
+.inicio-ofertas-titulo, .inicio-productos-destacados-titulo, .inicio-marcas-titulo{
+  font-size: 1.5em;
+  text-align: center;
+  margin:2em 0;
+}
+
+.inicio-ofertas, .inicio-productos-destacados, .inicio-marcas{
+  margin: 2em 0;
+}
+
+.inicio-flex-ofertas, .inicio-flex-productos-destacados{ /* centrar las flechas */
+  display: flex;
+  align-items: center;
+  position: relative;
+  height: 80vh;
+}
+
+.inicio-flecha-izquierda, .inicio-flecha-derecha{ /* estilos a las flechas*/
+  position:absolute;
+  border:none;
+  border-radius: 30%;
+  background: rgba(0,0,0,0.3);
+  width: 2em;
+  height: 10%;
+  top:cal(50% - 25%);
+  color:#fff;
+  font-size: 1em;
+  cursor: pointer;
+  z-index:20;
+  transition: 0.2s ease all;
+}
+.inicio-flecha-izquierda{
+  left:0;
+}
+.inicio-flecha-derecha{
+  right:0;
+}
+.inicio-flecha-izquierda:hover, .inicio-flecha-derecha:hover{
+  background:rgba(0,0,0,0.9);
+}
+
+.inicio-contenedor-carrusel-ofertas, .inicio-contenedor-carrusel-productos-destacados, .inicio-contenedor-carrusel-marcas{ 
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  overflow:hidden;
+}
+.inicio-carrusel-ofertas, .inicio-carrusel-productos-destacados{
+  display: flex;
+  height: 100%;
+  gap:1.5em;
+  margin-left: 1em;
+  margin-right: 3em;
+}
+
+.inicio-carrusel-ofertas .card, .inicio-carrusel-productos-destacados .card{
+  min-width: 50%;
+  display: flex;
+  align-items:end;
+  height: auto;
+  flex-wrap: wrap;
+}
+
+.inicio-carrusel-ofertas .card .description, .inicio-carrusel-productos-destacados .card .description{
+  height: 50%;
+}
+.inicio-carrusel-ofertas .card .card__image img, .inicio-carrusel-productos-destacados .card .card__image img{
+  width: 75%;
+  height: 85%;
+}
+@media (max-width:330px){
+  .inicio-flex-ofertas, .inicio-flex-productos-destacados{
+    height: 75vh;
+  }
+  .inicio-ofertas-titulo, .inicio-productos-destacados-titulo, .inicio-marcas-titulo{
+    font-size: 1.5em;
+  }
+  .tienda{
+    font-size: 84%;
+  }
+  .inicio-carrusel-ofertas .card .description, .inicio-carrusel-productos-destacados .card .description{
+    height:60%;
+  }
+}
+@media (min-width:426px){
+  .inicio-flex-ofertas, .inicio-flex-productos-destacados{
+    height: 80vh;
+  }
+  .inicio-ofertas-titulo, .inicio-productos-destacados-titulo, .inicio-marcas-titulo{
+    font-size: 1.5em;
+  }
+  .inicio-carrusel-ofertas .card .description, .inicio-carrusel-productos-destacados .card .description{
+    height:35%;
+  }
+  .inicio-carrusel-ofertas .card .card__image img, .inicio-carrusel-productos-destacados .card .card__image img{
+    width: 45%;
+    height: 75%;
+  }
+}
+
+@media (min-width:768px){
+  .inicio-flex-ofertas, .inicio-flex-productos-destacados{
+    height: 90vh;
+  }
+  .inicio-ofertas-titulo, .inicio-productos-destacados-titulo, .inicio-marcas-titulo{
+    font-size: 2.5em;
+  }
+  .inicio-carrusel-ofertas .card .description, .inicio-carrusel-productos-destacados .card .description{
+    height:50%;
+  }
+}
+@media (min-width:1024px){
+  .inicio-flex-ofertas, .inicio-flex-productos-destacados{
+    height: 100vh;
+  }
+  .inicio-ofertas-titulo, .inicio-productos-destacados-titulo, .inicio-marcas-titulo{
+    font-size: 2.5em;
+  }
+  .inicio-carrusel-ofertas .card .description, .inicio-carrusel-productos-destacados .card .description{
+    height:45%;
+  }
+  .inicio-carrusel-ofertas .card .card__image img, .inicio-carrusel-productos-destacados .card .card__image img{
+    width: 40%;
+    height: 70%;
+  }
+}
+
+/* banner de marcas */
+.inicio-marcas-imagen{
+  display: flex;
+  max-width:50%;
+  max-height: 10%;
+
+  animation: mover 30s linear infinite;
+  
+}
+.inicio-marcas-imagen img{
+  width:100%;
+  padding:1em;
+}
+@keyframes mover{
+  0%{
+    transform:translateX(0);
+  }
+  100%{
+    transform: translateX(calc(-800%));
+  }
+} 
+
+@media (min-width:768px){
+.inicio-carrusel-ofertas .card, .inicio-carrusel-productos-destacados .card{
+  min-width: 33%;
+  }
+@keyframes mover{
+  0%{
+    transform:translateX(0);
+  }
+  100%{
+    transform: translateX(calc(-650%));
+  }
+}
+}
+
+@media (min-width:1024px){
+  @keyframes mover{
+    0%{
+      transform:translateX(0);
+    }
+    100%{
+      transform: translateX(calc(-500%));
+    }
+  }
+}
+
+@media (min-width:1366px){
+  @keyframes mover{
+    0%{
+      transform:translateX(0);
+    }
+    100%{
+      transform: translateX(calc(-400%));
+    }
+  }
+}
+
 
 /* productos */
 
@@ -587,7 +816,6 @@ box-shadow: 9px 10px 5px -3px rgba(0,0,0,0.75);
 
 
 /* footer */
-
 footer{
   background-color: var(--color-principal);
   margin-top: auto;
