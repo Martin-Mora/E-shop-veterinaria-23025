@@ -7,7 +7,8 @@ const data= {
       "description":"Asegurá la energía y vitalidad de tu amigo para que pueda correr, saltar y jugar todo el día.",
       "kg":"10kg",
       "category":"comida gato",
-      "price":"10.600"
+      "price":"10.600",
+      "promo":"3.533"
     },
     {
 
@@ -17,7 +18,8 @@ const data= {
       "description":"Con componentes herbales naturales y nutrientes que haran que tu amigo crezca fuerte.",
       "kg":"15kg",
       "category":"comida perro",
-      "price":"15.100"
+      "price":"15.100",
+      "promo":"5.033,33"
     },
     {
 
@@ -26,7 +28,8 @@ const data= {
       "name":"Pelota Trenzada perro/gato",
       "description":"Sonido agradable, con cascabel en su interior!.Ideal para perros y gatos.",
       "category":"juguetes",
-      "price":"899"
+      "price":"899",
+      "promo":"299,66"
       
     },
     {
@@ -36,7 +39,8 @@ const data= {
       "name":"Ratita Vaiven Con Pelota",
       "description":"juguete muy divertido para los tiempos.No tóxico e inofensivo para las mascotas.",
       "category":"juguetes",
-      "price":"548"
+      "price":"548",
+      "promo":"182,66"
       
     },
     {
@@ -46,7 +50,8 @@ const data= {
       "description":"Una alimentación equilibrada es esencial para que tu fiel compañero se mantenga sano y fuerte.",
       "kg":"7.5kg",
       "category":"comida gato",
-      "price":"4.800"
+      "price":"4.800",
+      "promo":"1.600"
     },
     {
 
@@ -56,7 +61,8 @@ const data= {
       "description":"Ayuda a la formación de músculos fuertes, una alta digestibilidad, una piel sana y un pelaje brilloso.",
       "kg":"20kg",
       "category":"comida perro",
-      "price":"14.000"
+      "price":"14.000",
+      "promo":"4.6666,66"
     },
     {
       _id: 2,
@@ -65,7 +71,8 @@ const data= {
       "description":"Con esta opción de Catpro podrás cubrir las necesidades nutricionales y energéticas de tu gato.",
       "kg":"7.5kg",
       "category":"comida gato",
-      "price":"8.000"
+      "price":"8.000",
+      "promo":"2.666,66"
     },
     {
 
@@ -74,7 +81,8 @@ const data= {
       "name":"Cañita Alambre para gatos",
       "description":"Juguetes diseñados para despertar el instinto cazador de tu gato",
       "category":"juguetes",
-      "price":"699"
+      "price":"699",
+      "promo":"233"
       
     },
     {
@@ -84,7 +92,8 @@ const data= {
       "description":"Con carne de pollo como ingrediente, fuente de proteína de alto valor biológico para el animal.",
       "kg":"18kg",
       "category":"comida perro",
-      "price":"16.680"
+      "price":"16.680",
+      "promo":"5.560"
     },
     {
       _id: 10,
@@ -93,7 +102,8 @@ const data= {
       "description":" Este alimento posee una fórmula especial para proteger y cuidar su salud intestinal en su crecimiento.",
       "kg":"15kg",
       "category":"comida perro",
-      "price":"12.420"
+      "price":"12.420",
+      "promo":"4140"
     },
     {
       _id: 14,
@@ -101,7 +111,8 @@ const data= {
       "name":"Dental Mordillo x2 ",
       "description":"Diseñado con púas de goma suave que no lastima las encías del perro.",
       "category":"juguetes",
-      "price":"1.536"
+      "price":"1.536",
+      "promo":"512"
     },
     {
       _id: 6,
@@ -110,7 +121,8 @@ const data= {
       "description":"Ayuda a eliminar el sarro y a retrasar la formación de la placa dental con el proceso de masticación y trituración.",
       "kg":"12kg",
       "category":"comida gato",
-      "price":"21.000"
+      "price":"21.000",
+      "promo":"7.000"
     },
     {
       _id: 3,
@@ -119,7 +131,8 @@ const data= {
       "description":"Contiene minerales como calcio, fósforo, potasio y hierro, vitaminas A, D y E.",
       "kg":"7.5kg",
       "category":"comida gato",
-      "price":"10.600"
+      "price":"10.600",
+      "promo":"3.533,33"
     },
     {
       _id: 11,
@@ -128,7 +141,8 @@ const data= {
       "description":"Contiene DHA proveniente de aceite de pescado que promueve el desarrollo neurologico y del aprendizaje",
       "kg":"21kg",
       "category":"comida perro",
-      "price":"8.736"
+      "price":"8.736",
+      "promo":"2.912"
       
     },
     {
@@ -137,7 +151,8 @@ const data= {
       "name":"4 Pelotas de Goma",
       "description":"Apta para lanzador de pelotas.Ideal para juegos de recogida.",
       "category":"juguetes",
-      "price":"1.999"
+      "price":"1.999",
+      "promo":"666,33"
     },
     {
       _id: 16,
@@ -145,7 +160,8 @@ const data= {
       "name":"Rascador para gatos ",
       "description":"Hermoso rascador para las uñas de tu amigo felino.",
       "category":"juguetes",
-      "price":"3.229"
+      "price":"3.229",
+      "promo":"1.076,33"
     },
     {
       _id: 8,
@@ -154,7 +170,8 @@ const data= {
       "description":"Esta hecho con la justa combinación de nutrientes que facilitan una correcta digestión y absorción.",
       "kg":"20kg",
       "category":"comida perro",
-      "price":"9.618"
+      "price":"9.618",
+      "promo":"3.206"
     },
     {
       _id: 4,
@@ -163,7 +180,8 @@ const data= {
       "description":"Un alimento adecuado para garantizar el crecimiento, desarrollo y salud de tú mascota",
       "kg":"7.5kg",
       "category":"comida gato",
-      "price":"13.800"
+      "price":"13.800",
+      "promo":"4.600"
     },
     
     ]
